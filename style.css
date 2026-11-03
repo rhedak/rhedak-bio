@@ -56,6 +56,13 @@ h2 {
 .card p { margin: 0; color: var(--muted); font-size: .92rem; }
 .meta { display: flex; gap: 12px; margin-top: 10px; font-size: .8rem; color: var(--muted); }
 .tag { color: var(--accent); font-weight: 600; }
+.card.with-cover { display: flex; gap: 16px; align-items: flex-start; }
+.card.with-cover .cover { width: 96px; height: auto; aspect-ratio: 2 / 3; object-fit: cover; border-radius: 8px; flex: none; }
+.card.with-cover .body { min-width: 0; }
+.card.with-thumb { padding: 0 0 16px; overflow: hidden; }
+.card.with-thumb > :not(.thumb) { margin-left: 16px; margin-right: 16px; }
+.thumb { display: block; width: 100%; height: auto; aspect-ratio: 2 / 1; object-fit: cover; margin: 0 0 12px; background: var(--line); }
+video.thumb { aspect-ratio: auto; }
 .chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
 .chips a {
   padding: 5px 12px; border: 1px solid var(--line); border-radius: 999px;

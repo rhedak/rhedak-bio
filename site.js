@@ -28,6 +28,12 @@
       el("div", { class: "meta" }, [el("span", { class: "tag", text: w.where })]),
     ];
     var card = el("a", { class: "card", href: w.url, rel: "noopener" }, kids);
+    if (w.image) {
+      card.classList.add("with-cover");
+      card.insertBefore(el("img", { class: "cover", src: w.image, alt: w.alt || "", loading: "lazy", width: "400", height: "600" }), card.firstChild);
+      var body = el("div", { class: "body" }, kids);
+      card.appendChild(body);
+    }
     if (!w.extra) return card;
     var wrap = el("div", { class: "card-group" }, [card]);
     var row = el("div", { class: "chips" });
@@ -44,11 +50,24 @@
     var meta = el("div", { class: "meta" });
     if (r.language) meta.appendChild(el("span", { text: r.language }));
     if (r.stargazers_count) meta.appendChild(el("span", { text: "★ " + r.stargazers_count }));
-    return el("a", { class: "card", href: r.html_url, rel: "noopener" }, [
+    var card = el("a", { class: "card", href: r.html_url, rel: "noopener" }, [
       el("h3", { text: r.name }),
       el("p", { text: r.description || "" }),
       meta,
     ]);
+    var im = (S.projectImages || {})[r.name];
+    if (im) {
+      var thumb;
+      if (im.video) {
+        thumb = el("video", { class: "thumb", src: im.video, poster: im.src, muted: "", loop: "", autoplay: "", playsinline: "", preload: "none", "aria-label": im.alt || "" });
+        thumb.muted = true;
+      } else {
+        thumb = el("img", { class: "thumb", src: im.src, alt: im.alt || "", loading: "lazy", width: "800", height: "400" });
+      }
+      card.classList.add("with-thumb");
+      card.insertBefore(thumb, card.firstChild);
+    }
+    return card;
   }
 
   var box = $("projects");
