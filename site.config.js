@@ -1,0 +1,73 @@
+// Everything you'll want to edit lives here.
+window.SITE = {
+  name: "Rhedak",
+  tagline: "Hobby Writer, Game Dev and AI enthusiast",
+  location: "Tokyo",
+  github: "rhedak",
+
+  // Top-of-page buttons (the "link in bio" part).
+  links: [
+    { label: "Honeyfeed", url: "https://www.honeyfeed.fm/u/45686/novels" },
+    { label: "Panzer Island", url: "https://rhedak.github.io/panzer_island_pages/" },
+    { label: "GitHub", url: "https://github.com/rhedak" },
+  ],
+
+  // Game. Same card shape as writing.
+  games: [
+    {
+      title: "Panzer Island",
+      blurb: "A reactive turn-based strategy game: every step your units take triggers an immediate response from nearby drones. There is no end-turn button.",
+      url: "https://store.steampowered.com/app/4757690/Panzer_Island/",
+      where: "Steam · Android · Web",
+      extra: [
+        { label: "Google Play", url: "https://play.google.com/store/apps/details?id=com.rhedak.panzerisland" },
+        { label: "Play in browser", url: "https://rhedak.itch.io/panzer-island-web" },
+        { label: "Guides & docs", url: "https://rhedak.github.io/panzer_island_pages/" },
+      ],
+    },
+  ],
+
+  // Writing. Blurbs are condensed from the Honeyfeed pages.
+  writing: [
+    {
+      title: "Time Slider Katherina",
+      blurb: "A genius witch graduates four years early, just as rifts into parallel worlds start tearing reality apart.",
+      url: "https://www.honeyfeed.fm/novels/33829",
+      where: "Honeyfeed · Ongoing · Fantasy",
+    },
+    {
+      title: "The Hero of the Mist Tragedy",
+      blurb: "A contaminated Mist swallowed the kingdom of Okiri, and an innkeeper's boy better with a blade than he should be wants back in.",
+      url: "https://www.honeyfeed.fm/novels/32712",
+      where: "Honeyfeed · Finished · Fantasy / Mystery",
+    },
+    {
+      title: "The Bureaucracy of Blood",
+      blurb: "In a Europe the vampires hold, humans are donors and the rules are three lines on the wall: no speaking, no attachment.",
+      url: "https://www.honeyfeed.fm/novels/34317",
+      where: "Honeyfeed · Finished · Drama / Fantasy",
+    },
+    {
+      title: "The Hunt for the Everglow Crystals",
+      blurb: "Candles are a crown-controlled luxury, and a storyteller is arrested for reciting a dead man's tale of stones that hold light forever.",
+      url: "https://www.honeyfeed.fm/novels/33643",
+      where: "Honeyfeed · Finished · Adventure / Fantasy",
+    },
+    {
+      title: "Panzer Island (webnovel)",
+      blurb: "The story behind the game, in serial form.",
+      url: "https://www.royalroad.com/fiction/176303/panzer-island",
+      where: "Royal Road",
+    },
+  ],
+
+  // Repos listed first, in this order. Remaining non-fork repos follow by recent activity.
+  featured: [
+    "anime_ai_companion",
+    "anime-character-creator",
+    "steam_achievement_bulk_upload",
+    "fantasy-map-generator",
+    "audiobook_tts",
+  ],
+  maxRepos: 9,
+};

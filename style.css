@@ -1,0 +1,73 @@
+:root {
+  --bg: #faf7f2;
+  --fg: #231f1b;
+  --muted: #7a7068;
+  --card: #fff;
+  --line: #e8e0d5;
+  --accent: #c2410c;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #14110f;
+    --fg: #f1ebe3;
+    --muted: #9c9288;
+    --card: #1f1a17;
+    --line: #322b26;
+    --accent: #fb923c;
+  }
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font: 16px/1.55 system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+main { max-width: 640px; margin: 0 auto; padding: 48px 16px 32px; }
+a { color: inherit; }
+
+.hero { text-align: center; margin-bottom: 40px; }
+.avatar { border-radius: 50%; border: 3px solid var(--line); object-fit: cover; }
+h1 { margin: 16px 0 4px; font-size: 1.9rem; letter-spacing: -0.01em; }
+.tagline { margin: 0; font-size: 1.05rem; }
+.location { margin: 4px 0 0; color: var(--muted); font-size: .9rem; }
+.location:empty { display: none; }
+
+.links { display: flex; flex-direction: column; gap: 10px; margin-top: 24px; }
+.links a {
+  display: block; padding: 13px 16px; border-radius: 12px; text-decoration: none;
+  font-weight: 600; background: var(--fg); color: var(--bg);
+  transition: transform .12s, opacity .12s;
+}
+.links a:hover { transform: translateY(-1px); opacity: .9; }
+
+section { margin-top: 40px; }
+h2 {
+  margin: 0 0 12px; font-size: .8rem; text-transform: uppercase;
+  letter-spacing: .12em; color: var(--muted);
+}
+.cards { display: grid; gap: 12px; }
+.card {
+  display: block; padding: 16px; border: 1px solid var(--line); border-radius: 12px;
+  background: var(--card); text-decoration: none; transition: border-color .12s, transform .12s;
+}
+.card:hover { border-color: var(--accent); transform: translateY(-1px); }
+.card h3 { margin: 0 0 4px; font-size: 1.05rem; }
+.card p { margin: 0; color: var(--muted); font-size: .92rem; }
+.meta { display: flex; gap: 12px; margin-top: 10px; font-size: .8rem; color: var(--muted); }
+.tag { color: var(--accent); font-weight: 600; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+.chips a {
+  padding: 5px 12px; border: 1px solid var(--line); border-radius: 999px;
+  font-size: .82rem; text-decoration: none; color: var(--muted);
+}
+.chips a:hover { border-color: var(--accent); color: var(--accent); }
+.muted { color: var(--muted); }
+.more { margin-top: 14px; text-align: center; font-size: .9rem; }
+.more a { color: var(--accent); }
+footer { margin-top: 56px; text-align: center; color: var(--muted); font-size: .8rem; }
+
+@media (min-width: 560px) {
+  .links { flex-direction: row; justify-content: center; flex-wrap: wrap; }
+  .links a { padding: 11px 22px; }
+}
