@@ -71,6 +71,14 @@ window.SITE = {
       alt: "Panzer Island webnovel cover",
       where: "Royal Road",
     },
+    {
+      title: "Malfoid: The Girl who Yearned",
+      blurb: "A free fan webcomic retelling Philosopher's Stone with a split point of view between Harry and Draconia Malfoy.",
+      url: "https://rhedak.github.io/malfoid-the-girl-who-yearned/",
+      image: "assets/cover-malfoid.webp",
+      alt: "Cover of Malfoid: The Girl who Yearned: Draconia and Harry back to back with wands",
+      where: "Free webcomic · Fan work",
+    },
   ],
 
   // Repos listed first, in this order. Remaining non-fork repos follow by recent activity.
