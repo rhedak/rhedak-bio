@@ -10,6 +10,7 @@ window.SITE = {
     { label: "Honeyfeed", url: "https://www.honeyfeed.fm/u/45686/novels" },
     { label: "Panzer Island", url: "https://rhedak.github.io/panzer_island_pages/" },
     { label: "GitHub", url: "https://github.com/rhedak" },
+    { label: "Ko-fi", url: "https://ko-fi.com/rhedak" },
   ],
 
   // Game. Same card shape as writing.
