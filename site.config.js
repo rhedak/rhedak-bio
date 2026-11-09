@@ -80,6 +80,22 @@ window.SITE = {
       alt: "Cover of Malfoid: The Girl who Yearned: Draconia and Harry back to back with wands",
       where: "Free webcomic · Fan work",
     },
+    {
+      title: "Malfoid Gallery",
+      blurb: "A gallery of Malfoid art: daily posts, Draconia Malfoid and Grok Imagine pictures.",
+      url: "https://rhedak.github.io/malfoid-gallery/",
+      banner: "assets/malfoid-gallery-banner.jpg",
+      alt: "Malfoid Gallery banner: six Malfoid portraits with the gallery title",
+      where: "Gallery · Fan art",
+    },
+    {
+      title: "Malfoid Index",
+      blurb: "An index of fanfics, fan art, comics, games and videos about Draconia Malfoid, made by other people.",
+      url: "https://rhedak.github.io/malfoid-gallery/malfoid-index/",
+      banner: "assets/malfoid-index-banner.jpg",
+      alt: "Malfoid Index banner: six Malfoid portraits with the index title",
+      where: "Index · Fan works",
+    },
   ],
 
   // Repos listed first, in this order. Remaining non-fork repos follow by recent activity.

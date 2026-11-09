@@ -28,6 +28,10 @@
       el("div", { class: "meta" }, [el("span", { class: "tag", text: w.where })]),
     ];
     var card = el("a", { class: "card", href: w.url, rel: "noopener" }, kids);
+    if (w.banner) {
+      card.classList.add("with-thumb");
+      card.insertBefore(el("img", { class: "thumb", src: w.banner, alt: w.alt || "", loading: "lazy", width: "800", height: "420" }), card.firstChild);
+    }
     if (w.image) {
       card.classList.add("with-cover");
       card.insertBefore(el("img", { class: "cover", src: w.image, alt: w.alt || "", loading: "lazy", width: "400", height: "600" }), card.firstChild);
