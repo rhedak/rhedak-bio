@@ -18,7 +18,14 @@
   $("all-repos").href = "https://github.com/" + S.github + "?tab=repositories";
 
   S.links.forEach(function (l) {
-    $("links").appendChild(el("a", { href: l.url, rel: "me noopener", text: l.label }));
+    var a = el("a", { href: l.url, rel: "me noopener" });
+    if (l.icon) {
+      a.classList.add("with-icon");
+      a.appendChild(el("span", { class: "icon", "aria-hidden": "true" }))
+        .innerHTML = '<svg viewBox="0 0 24 24" focusable="false"><path d="' + l.icon + '"/></svg>';
+    }
+    a.appendChild(document.createTextNode(l.label));
+    $("links").appendChild(a);
   });
 
   function itemCard(w) {
