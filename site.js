@@ -19,10 +19,15 @@
 
   S.links.forEach(function (l) {
     var a = el("a", { href: l.url, rel: "me noopener" });
-    if (l.icon) {
+    if (l.icon || l.iconImg) {
       a.classList.add("with-icon");
-      a.appendChild(el("span", { class: "icon", "aria-hidden": "true" }))
-        .innerHTML = '<svg viewBox="0 0 24 24" focusable="false"><path d="' + l.icon + '"/></svg>';
+      var span = el("span", { class: "icon", "aria-hidden": "true" });
+      if (l.iconImg) {
+        span.appendChild(el("img", { src: l.iconImg, alt: "", width: "90", height: "90" }));
+      } else {
+        span.innerHTML = '<svg viewBox="0 0 24 24" focusable="false"><path d="' + l.icon + '"/></svg>';
+      }
+      a.appendChild(span);
     }
     a.appendChild(document.createTextNode(l.label));
     $("links").appendChild(a);
