@@ -86,7 +86,7 @@ window.SITE = {
     {
       title: "Malfoid Gallery",
       blurb: "A gallery of Malfoid art: daily posts, Draconia Malfoid and Grok Imagine pictures.",
-      url: "https://rhedak.github.io/malfoid-gallery/",
+      url: "https://malfoid.jp/",
       banner: "assets/malfoid-gallery-banner.jpg",
       alt: "Malfoid Gallery banner: six Malfoid portraits with the gallery title",
       where: "Gallery · Fan art",
@@ -94,7 +94,7 @@ window.SITE = {
     {
       title: "Malfoid Index",
       blurb: "An index of fanfics, fan art, comics, games and videos about Draconia Malfoid, made by other people.",
-      url: "https://rhedak.github.io/malfoid-gallery/malfoid-index/",
+      url: "https://malfoid-index.com/",
       banner: "assets/malfoid-index-banner.jpg",
       alt: "Malfoid Index banner: six Malfoid portraits with the index title",
       where: "Index · Fan works",
